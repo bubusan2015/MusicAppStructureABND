@@ -1,8 +1,5 @@
 package com.example.android.musicappstructureabnd;
 
-/**
- * Created by bogdan on 2/27/2018.
- */
 
 public class Song {
     private int songId;
@@ -13,8 +10,7 @@ public class Song {
     private String category;
     private int albumImageResourceId;
 
-    public Song() {
-    }
+    public Song() {  }
 
     public Song(int songId, String name, String artistName, String album, int year, String category, int albumImageResourceId) {
         this.songId = songId;

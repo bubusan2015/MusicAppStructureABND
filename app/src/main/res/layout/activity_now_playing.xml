@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background2"
-    tools:context="com.example.android.musicappstructureabnd.NowPlaying">
+    tools:context="com.example.android.musicappstructureabnd.NowPlayingActivity">
 
     <TextView
         android:id="@+id/tv_nowPlaying_ArtistName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
         android:layout_marginTop="@dimen/default_margin"
         android:textSize="@dimen/details_font_size_2"
         android:textColor="@color/foreground1"
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_nowPlaying_ArtistName"
-        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
         android:layout_marginTop="@dimen/default_margin"
         android:textColor="@color/foreground2"
         android:textSize="@dimen/details_font_size_1"
@@ -80,9 +80,5 @@
             android:layout_height="@dimen/image_list_item_size"
             android:layout_margin="@dimen/default_margin"
             android:background="@drawable/ff_right" />
-
-
-
     </LinearLayout>
-
 </RelativeLayout>

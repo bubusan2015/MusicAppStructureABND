@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class NowPlaying extends AppCompatActivity {
+public class NowPlayingActivity extends AppCompatActivity {
     private TextView ArtistName,SongName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

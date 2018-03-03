@@ -16,10 +16,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Details"
+            android:name=".DetailsActivity"
             android:label="Song details"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".NowPlaying"
+        <activity android:name=".NowPlayingActivity"
             android:label="@string/text_now_playing"
             android:parentActivityName=".MainActivity" ></activity>
     </application>

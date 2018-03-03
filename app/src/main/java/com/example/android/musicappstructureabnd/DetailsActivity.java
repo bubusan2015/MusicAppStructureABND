@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Details extends AppCompatActivity {
+public class DetailsActivity extends AppCompatActivity {
     TextView SongId;
     TextView SongName;
     TextView ArtistName;

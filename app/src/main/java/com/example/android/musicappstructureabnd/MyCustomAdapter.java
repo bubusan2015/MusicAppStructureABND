@@ -11,23 +11,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
-
-/**
- * Created by nibos on 2/28/2018.
- */
 
 public class MyCustomAdapter extends ArrayAdapter<Song> {
     public MyCustomAdapter(@NonNull Context context, @NonNull List<Song> lista) {
         super(context, 0, lista);
     }
-
-
-    @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View rowView=convertView;
@@ -39,10 +29,8 @@ public class MyCustomAdapter extends ArrayAdapter<Song> {
 
         TextView SongName=(TextView) rowView.findViewById(R.id.tv_li_songName);
         SongName.setText(currentSong.getName());
-
         TextView ArtistName=(TextView) rowView.findViewById(R.id.tv_li_artistName);
         ArtistName.setText(currentSong.getArtistName());
-
         ImageView AlbumImageView=(ImageView) rowView.findViewById(R.id.iv_li_album);
         if(currentSong.getAlbumImageResourceId()==0) {
             // TO DO set blank album image
@@ -55,7 +43,7 @@ public class MyCustomAdapter extends ArrayAdapter<Song> {
         infoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getContext(),Details.class);
+                Intent i=new Intent(getContext(),DetailsActivity.class);
                 i.putExtra("songId",String.valueOf(currentSong.getSongId()));
                 i.putExtra("songName",currentSong.getName());
                 i.putExtra("artistName",currentSong.getArtistName());
@@ -74,7 +62,7 @@ public class MyCustomAdapter extends ArrayAdapter<Song> {
             public void onClick(View v) {
                 // wow.. this is cool from -> https://stackoverflow.com/questions/12142255/call-activity-method-from-adapter
                 // I don't know how ok is to use a trick like this but couldn't find a way
-                // for my button sendind commands to say so to the belonging activity from inside the custom adapter
+                // for my button sending commands to say so to the belonging activity from inside the custom adapter
                 if (getContext() instanceof MainActivity)
                 ((MainActivity)getContext()).playSong(sendPosition);
             }

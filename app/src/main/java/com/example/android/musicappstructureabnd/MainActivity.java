@@ -7,10 +7,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -68,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Song currentSong =mySongsList.get(position);
-                Intent i=new Intent(MainActivity.this,Details.class);
+                Intent i=new Intent(MainActivity.this,DetailsActivity.class);
                 i.putExtra("songId",String.valueOf(currentSong.getSongId()));
                 i.putExtra("songName",currentSong.getName());
                 i.putExtra("artistName",currentSong.getArtistName());
@@ -92,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,"Nothing playing right now!",Toast.LENGTH_SHORT).show();
             return;
         }
-        Intent i=new Intent(this,NowPlaying.class);
+        Intent i=new Intent(this,NowPlayingActivity.class);
         Song currentSong=mySongsList.get(MainActivity.songPlayingPosition);
         i.putExtra("songName",currentSong.getName());
         i.putExtra("artistName",currentSong.getArtistName());
