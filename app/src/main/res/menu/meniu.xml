@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_nowPlaying"
+        android:icon="@drawable/nota_muzicala"
+        android:title="@string/text_now_playing" />
+</menu>

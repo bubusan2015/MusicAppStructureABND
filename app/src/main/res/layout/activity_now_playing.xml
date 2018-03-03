@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background2"
+    tools:context="com.example.android.musicappstructureabnd.NowPlaying">
+
+    <TextView
+        android:id="@+id/tv_nowPlaying_ArtistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:textSize="@dimen/details_font_size_2"
+        android:textColor="@color/foreground1"
+        tools:text="Artist Name"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/tv_nowPlaying_songName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_nowPlaying_ArtistName"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:textColor="@color/foreground2"
+        android:textSize="@dimen/details_font_size_1"
+        tools:text="Singer name care ar trebui sa fie mai mare"
+        />
+    <ImageView
+        android:layout_width="@dimen/image_size2"
+        android:layout_height="@dimen/image_size2"
+        android:layout_margin="@dimen/image_margin2"
+        android:layout_below="@id/tv_nowPlaying_songName"
+        android:layout_above="@id/ll_navigation"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/nota_muzicala"
+        />
+    <ProgressBar
+        android:indeterminate="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="10"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/default_margin"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:id="@+id/progressBar" />
+
+    <LinearLayout
+        android:id="@+id/ll_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@id/progressBar"
+        android:gravity="center_horizontal"
+        >
+
+        <Button
+            android:id="@+id/ib_left"
+            android:layout_width="@dimen/image_list_item_size"
+            android:layout_height="@dimen/image_list_item_size"
+            android:layout_margin="@dimen/default_margin"
+            android:background="@drawable/ff_left" />
+        <Button
+            android:id="@+id/ib_play"
+            android:layout_margin="@dimen/default_margin"
+            android:layout_width="@dimen/image_list_item_size"
+            android:layout_height="@dimen/image_list_item_size"
+            android:background="@drawable/play_button"
+            />
+
+        <Button
+            android:id="@+id/ib_right"
+            android:layout_width="@dimen/image_list_item_size"
+            android:layout_height="@dimen/image_list_item_size"
+            android:layout_margin="@dimen/default_margin"
+            android:background="@drawable/ff_right" />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

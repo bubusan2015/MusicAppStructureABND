@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background1"
+    tools:context="com.example.android.musicappstructureabnd.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_main_now_playing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background2"
+        android:textColor="@color/foreground2"
+        android:textSize="@dimen/details_font_size_1"
+        android:padding="@dimen/default_padding"
+        android:layout_alignParentBottom="true"
+        android:text="@string/nothing_playing_yet"
+        />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/my_playlist"
+        android:background="@color/background1"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/tv_main_now_playing"
+        />
+
+</RelativeLayout>

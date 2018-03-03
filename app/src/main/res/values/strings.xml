@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Music Structure</string>
+    <string name="title_activity_details">Details</string>
+    <string name="year">Year:</string>
+    <string name="category">Category:</string>
+    <string name="album">Album:</string>
+    <string name="artist_name">Artist name:</string>
+    <string name="song_name">Song name:</string>
+    <string name="song_id">Song ID:</string>
+    <string name="now_playing">Now Playing: </string>
+    <string name="nothing_playing_yet">Nothing playing yet.....</string>
+    <string name="text_now_playing">Now Playing</string>
+</resources>
